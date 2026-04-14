@@ -1,9 +1,8 @@
-import "./App.css";
+import React from "react";
+import Body from "./components/Body.js";
 
 function App() {
-  return (
-    <div className="text-2xl font-bold text-Green">My first App Finally</div>
-  );
+  return <Body />;
 }
 
 export default App;
