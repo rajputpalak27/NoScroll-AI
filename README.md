@@ -16,6 +16,16 @@
 - Provide Store to the App
 - Redirect User to Home Page (onAuthStateChanged API)
 - Sign Out - User Profile
+- Handle redundant redirect (SigIn | Home)
+- Unsubscribe onAUthStateChanged callback
+- Create TMDB App and get API Key
+- Hook -> Fetch API for Movie Data from TMDB
+- Create and add nowPlaying movies slice to store
+- Home Page Component
+- Primary and Secondary Containers
+- Custom Hook for Trailer Fetch
+- Add Trailer to Redux Store
+- Implemented the Primary container with Trailer BG
 
 # Features
 

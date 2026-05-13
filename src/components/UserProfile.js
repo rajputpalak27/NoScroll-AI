@@ -12,9 +12,7 @@ const UserProfile = () => {
   const navigate = useNavigate();
   const handleSignOut = () => {
     signOut(auth)
-      .then(() => {
-        navigate("/");
-      })
+      .then(() => {})
       .catch((error) => {
         navigate("/notFound");
       });

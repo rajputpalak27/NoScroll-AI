@@ -3,12 +3,12 @@ import Header from "./Header";
 import { validateFields } from "../utils/validate";
 import { auth } from "../utils/firebase";
 import { signOut, updateProfile } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
 
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import { BACKGROUND } from "../utils/constants";
 
 const Login = () => {
   const [isSignIn, setSignIn] = useState(true);
@@ -17,7 +17,6 @@ const Login = () => {
   const email = useRef(null);
   const name = useRef(null);
   const password = useRef(null);
-  const navigate = useNavigate();
 
   const handleLogin = () => {
     setSignIn(!isSignIn);
@@ -45,9 +44,7 @@ const Login = () => {
           })
             .then(() => {
               signOut(auth);
-
               setSignIn(true);
-              navigate("/");
             })
             .catch((error) => {
               setError(error.code, "-", error.message);
@@ -66,8 +63,6 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          navigate("/home");
-          console.log("User Logged In", user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -83,7 +78,7 @@ const Login = () => {
       <div className="absolute inset-0">
         <img
           className="w-full h-full object-cover"
-          src="https://occ.a.nflxso.net/dnm/api/v6/iMyKkw5SVrkCXbCfSBEb_Pjar5Y/AAAAQBTxE26zgLJoqZnmxUCfZtVJ2HbJUsVonZ_9Uo-pn68zarPK.png"
+          src={BACKGROUND}
           alt="bg-image"
         />
       </div>
