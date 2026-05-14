@@ -2,9 +2,7 @@ import { useSelector } from "react-redux";
 import useTrailerVideo from "../hooks/useTrailerVideo";
 
 const DisplayVideo = ({ displayId }) => {
-  const nowTrailerVideo = useSelector(
-    (store) => store.nowMovies?.nowTrailerVideo,
-  );
+  const nowTrailerVideo = useSelector((store) => store.movies?.nowTrailerVideo);
   useTrailerVideo(displayId);
   return (
     <div className="">

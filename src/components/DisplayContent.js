@@ -3,7 +3,7 @@ import { Info, Play } from "lucide-react";
 
 const DisplayContent = ({ title, overview }) => {
   return (
-    <div className="w-screen aspect-video pt-[20%] px-[3.5%] absolute text-white bg-gradient-to-r from-black">
+    <div className="w-screen aspect-video pt-[15%] px-[3.5%] absolute text-white bg-gradient-to-r from-black">
       <h1 className="text-6xl font-bold">{title}</h1>
       <p className="py-6 text-lg w-1/4">{overview}</p>
       <div className="flex items-center gap-4">

@@ -26,6 +26,12 @@
 - Custom Hook for Trailer Fetch
 - Add Trailer to Redux Store
 - Implemented the Primary container with Trailer BG
+- Secondary Component MovieList Section
+- Movie List Section Movie Card
+- Use TMDB Image URL with poster_url for data cards
+- Custom Hooks to fetch All category of Movies
+- Add Data to redux Store
+- Tailwind For UI
 
 # Features
 

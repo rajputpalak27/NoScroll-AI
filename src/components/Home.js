@@ -2,9 +2,16 @@ import Header from "./Header.js";
 import useNowPlaying from "../hooks/useNowPlaying.js";
 import PrimaryContainer from "./PrimaryContainer.js";
 import SecondaryContainer from "./SecondaryContainer.js";
+import usePopularMovies from "../hooks/usePopularMovies.js";
+import useTopRated from "../hooks/useTopRated.js";
+import useUpcomingMovies from "../hooks/useUpcomingMovies.js";
 
 const Home = () => {
   useNowPlaying();
+  usePopularMovies();
+  useTopRated();
+  useUpcomingMovies();
+
   return (
     <>
       <Header />

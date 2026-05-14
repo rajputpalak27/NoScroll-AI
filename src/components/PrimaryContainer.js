@@ -4,7 +4,7 @@ import DisplayContent from "./DisplayContent";
 import DisplayVideo from "./DisplayVideo";
 
 const PrimaryContainer = () => {
-  const nowPlaying = useSelector((store) => store.nowMovies?.nowPlayingMovies);
+  const nowPlaying = useSelector((store) => store.movies?.nowPlayingMovies);
   if (!nowPlaying) return;
 
   const currentMovie = nowPlaying[0];
