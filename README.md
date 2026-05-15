@@ -32,6 +32,8 @@
 - Custom Hooks to fetch All category of Movies
 - Add Data to redux Store
 - Tailwind For UI
+- Open AI Search Bar
+- Multi Language Preference Feature
 
 # Features
 

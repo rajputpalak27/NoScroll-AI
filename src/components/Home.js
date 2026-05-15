@@ -5,6 +5,8 @@ import SecondaryContainer from "./SecondaryContainer.js";
 import usePopularMovies from "../hooks/usePopularMovies.js";
 import useTopRated from "../hooks/useTopRated.js";
 import useUpcomingMovies from "../hooks/useUpcomingMovies.js";
+import { useSelector } from "react-redux";
+import OpenAiSearch from "./OpenAiSearch.js";
 
 const Home = () => {
   useNowPlaying();
@@ -12,11 +14,23 @@ const Home = () => {
   useTopRated();
   useUpcomingMovies();
 
+  const showOpenAiSearch = useSelector(
+    (store) => store.openai.showOpenAiSearch,
+  );
+
   return (
     <>
       <Header />
-      <PrimaryContainer />
-      <SecondaryContainer />
+      {showOpenAiSearch ? (
+        <>
+          <OpenAiSearch />
+        </>
+      ) : (
+        <>
+          <PrimaryContainer />
+          <SecondaryContainer />
+        </>
+      )}
 
       {/* {
         Container 1{
